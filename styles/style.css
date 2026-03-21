@@ -57,6 +57,7 @@ ol {
 .content {
   display: flex;
   min-width: 1140px;
+  min-height: 100vh;
   align-items: flex-end;
   flex-direction: row;
   gap: 30px;
@@ -66,7 +67,7 @@ ol {
 .search-form {
   display: flex;
   gap: 40px;
-  align-items: flex-end;
+  align-items: flex-start;
   width: 100%;
 }
 
@@ -82,7 +83,7 @@ ol {
 .content__details {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  align-self: flex-start; 
   width: 100%;
   gap: 26px;
 }
@@ -139,16 +140,10 @@ ol {
   font-size: 75px;
   line-height: 94%;
   letter-spacing: 0;
-  text-transform: uppercase;
+  text-transform: uppercase; 
 }
 
 .content__accent {
-  font-family: "Oswald", sans-serif;
-  font-weight: 700;
-  font-size: 75px;
-  line-height: 94%;
-  letter-spacing: 0;
-  text-transform: uppercase;
   color: #545050;
 }
 
@@ -182,7 +177,7 @@ ol {
   color: #ffffff;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 4;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -201,7 +196,7 @@ ol {
   display: flex;
   gap: 15px;
   align-items: center;
-  padding-bottom: 5px;
+  align-items: flex-start;
 }
 
 .search-form__fieldset {
@@ -212,7 +207,7 @@ ol {
   display: flex;
   align-items: center;
   width: fit-content;
-  gap: 1.5px;
+  gap: 5px;
   cursor: pointer;
 }
 
@@ -224,7 +219,7 @@ ol {
   color: #ffffff;
   background-color: transparent;
   border: none;
-  border-top: 1px solid #ffffff;
+  border-top: 1px solid currentColor;
   border-bottom: 1px solid #ffffff;
   padding: 5px 0;
   width: 100%;
@@ -237,7 +232,7 @@ ol {
 }
 
 .search-form__label:has(.search-form__textfield:focus-visible) {
-  outline: 2px solid #ffffff;
+  outline: 1px solid #ffffff;
   outline-offset: 2px;
 }
 
@@ -277,7 +272,7 @@ ol {
   cursor: pointer;
   background-color: transparent;
   border: 1px solid #ffffff;
-  font-family: "Raleway", sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 700;
   font-size: 18px;
   color: #ffffff;
@@ -287,11 +282,14 @@ ol {
   min-width: 194px;
   min-height: 34px;
   margin-left: auto;
+  align-self: flex-end;
 }
 
 .more-button {
-  width: 100%;
+  display: block;
+  width: calc(100% - 4px); 
   min-height: 34px;
+  margin: 0 2px 2px;
 }
 
 .button:hover {
@@ -307,8 +305,8 @@ ol {
 }
 
 .button:focus-visible {
-  outline: 2px solid #ffffff;
-  outline-offset: 4px;
+  outline: 1px solid #ffffff;
+  outline-offset: 2px;
 }
 
 .content__card-link_current {
